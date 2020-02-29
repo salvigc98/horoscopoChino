@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BCT-0V-iBK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ow6-8R-ka2">
+            <objects>
+                <navigationController id="BCT-0V-iBK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sn5-2e-u0M">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pZO-5r-Wfd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PbN-p9-zoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-806" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HoroscopoChino" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marco3" translatesAutoresizingMaskIntoConstraints="NO" id="GaO-mR-OTp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icono" translatesAutoresizingMaskIntoConstraints="NO" id="NYC-Nm-acN">
+                                <rect key="frame" x="-147.5" y="267" width="709" height="384"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="384" id="KSs-72-CNx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consulta tu horóscopo chino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgD-Xp-BDm">
+                                <rect key="frame" x="17.5" y="681" width="379" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <color key="textColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GaO-mR-OTp" secondAttribute="trailing" id="3sL-dd-Vxc"/>
+                            <constraint firstItem="NYC-Nm-acN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8NV-T5-OZ5"/>
+                            <constraint firstItem="GaO-mR-OTp" firstAttribute="top" secondItem="NYC-Nm-acN" secondAttribute="bottom" constant="-563" id="EL6-jR-s4J"/>
+                            <constraint firstItem="KgD-Xp-BDm" firstAttribute="top" secondItem="NYC-Nm-acN" secondAttribute="bottom" constant="30" id="Jey-RX-TUD"/>
+                            <constraint firstItem="GaO-mR-OTp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MQn-5v-8Io"/>
+                            <constraint firstItem="GaO-mR-OTp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iTC-hI-79W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GaO-mR-OTp" secondAttribute="bottom" constant="-34" id="mNW-0n-1TW"/>
+                            <constraint firstItem="KgD-Xp-BDm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wm9-F5-08j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QzK-cx-V9y" appends="YES" id="Rfu-dG-zZk"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="M2X-jT-gn6"/>
+                    <connections>
+                        <segue destination="y7j-O7-MGY" kind="show" identifier="dateTimeSegue" id="zmu-qD-w4n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="QzK-cx-V9y">
+                    <connections>
+                        <action selector="navigationToDatetimeViewTapGesture:" destination="BYZ-38-t0r" id="GYA-Lz-MUz"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Date Time View Controller-->
+        <scene sceneID="hzo-Oy-cEH">
+            <objects>
+                <viewController id="y7j-O7-MGY" customClass="DateTimeViewController" customModule="HoroscopoChino" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jKa-Wx-kE7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marco4" translatesAutoresizingMaskIntoConstraints="NO" id="K5U-3f-ROj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diA-Ak-qdQ">
+                                <rect key="frame" x="47" y="220" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="-76138633.073027968">
+                                    <!--1998-08-03 18:22:46 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-375537600">
+                                    <!--1989-02-06 12:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1940400">
+                                    <!--2001-01-23 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="es_ES"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ju8-dS-bSu">
+                                <rect key="frame" x="138.5" y="549" width="137" height="38"/>
+                                <color key="backgroundColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
+                                <state key="normal" title="Consultar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dateTimeButtonTapped:" destination="y7j-O7-MGY" eventType="touchUpInside" id="bjS-wh-A7w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="diA-Ak-qdQ" firstAttribute="centerX" secondItem="jKa-Wx-kE7" secondAttribute="centerX" id="DU1-ef-L3w"/>
+                            <constraint firstItem="Ju8-dS-bSu" firstAttribute="centerX" secondItem="jKa-Wx-kE7" secondAttribute="centerX" id="FfX-l0-8GD"/>
+                            <constraint firstItem="K5U-3f-ROj" firstAttribute="top" secondItem="yhC-0r-Oj5" secondAttribute="top" id="FyV-jq-SaP"/>
+                            <constraint firstItem="K5U-3f-ROj" firstAttribute="top" secondItem="diA-Ak-qdQ" secondAttribute="bottom" constant="-348" id="bd9-DR-CS0"/>
+                            <constraint firstItem="K5U-3f-ROj" firstAttribute="leading" secondItem="yhC-0r-Oj5" secondAttribute="leading" id="k9k-2s-iI8"/>
+                            <constraint firstItem="Ju8-dS-bSu" firstAttribute="top" secondItem="diA-Ak-qdQ" secondAttribute="bottom" constant="113" id="uzl-Rp-Jn2"/>
+                            <constraint firstAttribute="bottom" secondItem="K5U-3f-ROj" secondAttribute="bottom" id="xGv-vi-R0h"/>
+                            <constraint firstItem="K5U-3f-ROj" firstAttribute="trailing" secondItem="yhC-0r-Oj5" secondAttribute="trailing" id="xR5-Qh-DXn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yhC-0r-Oj5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bvh-Et-jpE"/>
+                    <connections>
+                        <outlet property="dateTimeButton" destination="Ju8-dS-bSu" id="sD0-A2-3gy"/>
+                        <outlet property="dateTimePicker" destination="diA-Ak-qdQ" id="zcF-54-UfZ"/>
+                        <segue destination="z5u-7V-CtJ" kind="presentation" identifier="descriptionSegue" id="T9E-tf-Svy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJl-al-mId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="133.92857142857142"/>
+        </scene>
+        <!--Description View Controller-->
+        <scene sceneID="Uok-ZX-G2X">
+            <objects>
+                <viewController id="z5u-7V-CtJ" customClass="DescriptionViewController" customModule="HoroscopoChino" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AoJ-5G-ih7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marco4" translatesAutoresizingMaskIntoConstraints="NO" id="3JX-in-QOZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="843"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tigre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrL-G5-3Ym">
+                                <rect key="frame" x="166" y="69.5" width="82" height="30.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                <color key="textColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tigre" translatesAutoresizingMaskIntoConstraints="NO" id="igb-Z5-Seg">
+                                <rect key="frame" x="-295" y="118" width="1004" height="339"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="339" id="pOt-Hd-dWz"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TlO-h3-88N">
+                                <rect key="frame" x="50" y="497" width="314" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="LlC-iV-dSh">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direccion:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKc-U8-9eO">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="3HW-pA-kmV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                <color key="textColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5o-4h-mDa">
+                                                <rect key="frame" x="90" y="0.0" width="224" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="224" id="uOk-rY-r6Y"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                <color key="textColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Y5o-4h-mDa" firstAttribute="leading" secondItem="mKc-U8-9eO" secondAttribute="trailing" id="8aJ-MZ-wsy"/>
+                                            <constraint firstItem="mKc-U8-9eO" firstAttribute="leading" secondItem="LlC-iV-dSh" secondAttribute="leading" id="J5B-gR-q8r"/>
+                                            <constraint firstAttribute="height" constant="30" id="dX3-8M-lgf"/>
+                                            <constraint firstItem="mKc-U8-9eO" firstAttribute="top" secondItem="LlC-iV-dSh" secondAttribute="top" id="f4k-dZ-zDh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SJq-Qt-ziY">
+                                        <rect key="frame" x="0.0" y="30" width="314" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elemento:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cm1-NZ-pTz">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="aW9-MI-6uG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                <color key="textColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PP-cb-EXu">
+                                                <rect key="frame" x="90" y="0.0" width="224" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="224" id="bmV-OX-wfe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                <color key="textColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="c0E-1F-OeS"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ujF-g0-CSf">
+                                        <rect key="frame" x="0.0" y="60" width="314" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estacion:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-9R-Uxq">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="fub-XE-sif"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                <color key="textColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3E-Po-ccA">
+                                                <rect key="frame" x="85" y="0.0" width="229" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="229" id="AMB-cP-Lfi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                <color key="textColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="C4z-8y-i6F"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="U5x-K4-wvW">
+                                        <rect key="frame" x="0.0" y="90" width="314" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compatible con:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyU-sM-FPI">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="brP-Gl-qtD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                <color key="textColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-Cs-1TK">
+                                                <rect key="frame" x="140" y="0.0" width="174" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="Qya-y4-Lzy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                <color key="textColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4Sv-fw-Rmr"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Zfb-PV-BPr">
+                                        <rect key="frame" x="0.0" y="120" width="314" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUX-f6-Qcu">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="60"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                <color key="textColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Zfb-PV-BPr" firstAttribute="width" secondItem="TlO-h3-88N" secondAttribute="width" id="9OQ-uV-HwW"/>
+                                    <constraint firstItem="ujF-g0-CSf" firstAttribute="width" secondItem="TlO-h3-88N" secondAttribute="width" id="J9D-go-KXd"/>
+                                    <constraint firstAttribute="height" constant="180" id="NpB-Mc-8Sq"/>
+                                    <constraint firstItem="LlC-iV-dSh" firstAttribute="width" secondItem="TlO-h3-88N" secondAttribute="width" id="pRf-TR-QFZ"/>
+                                    <constraint firstItem="SJq-Qt-ziY" firstAttribute="width" secondItem="TlO-h3-88N" secondAttribute="width" id="sLe-9d-heZ"/>
+                                    <constraint firstItem="U5x-K4-wvW" firstAttribute="width" secondItem="TlO-h3-88N" secondAttribute="width" id="yaE-IP-nYh"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3JX-in-QOZ" firstAttribute="bottom" secondItem="nsc-WW-IkY" secondAttribute="bottom" constant="35" id="19K-TK-VdY"/>
+                            <constraint firstItem="igb-Z5-Seg" firstAttribute="centerX" secondItem="AoJ-5G-ih7" secondAttribute="centerX" id="3xV-6m-hAX"/>
+                            <constraint firstItem="3JX-in-QOZ" firstAttribute="top" secondItem="nsc-WW-IkY" secondAttribute="top" id="Csz-EJ-cz9"/>
+                            <constraint firstItem="jrL-G5-3Ym" firstAttribute="centerX" secondItem="AoJ-5G-ih7" secondAttribute="centerX" id="HbX-2e-xkJ"/>
+                            <constraint firstItem="3JX-in-QOZ" firstAttribute="trailing" secondItem="nsc-WW-IkY" secondAttribute="trailing" id="LLQ-NV-r7K"/>
+                            <constraint firstItem="nsc-WW-IkY" firstAttribute="trailing" secondItem="TlO-h3-88N" secondAttribute="trailing" constant="50" id="PEn-ER-e7J"/>
+                            <constraint firstItem="igb-Z5-Seg" firstAttribute="top" secondItem="jrL-G5-3Ym" secondAttribute="bottom" constant="18" id="VPY-mt-six"/>
+                            <constraint firstItem="3JX-in-QOZ" firstAttribute="leading" secondItem="nsc-WW-IkY" secondAttribute="leading" id="b69-GZ-4Wf"/>
+                            <constraint firstItem="TlO-h3-88N" firstAttribute="leading" secondItem="nsc-WW-IkY" secondAttribute="leading" constant="50" id="ecL-mT-dUd"/>
+                            <constraint firstItem="TlO-h3-88N" firstAttribute="top" secondItem="igb-Z5-Seg" secondAttribute="bottom" constant="40" id="o7g-U4-Gqm"/>
+                            <constraint firstItem="3JX-in-QOZ" firstAttribute="top" secondItem="jrL-G5-3Ym" secondAttribute="bottom" constant="-100" id="wlv-UF-b2H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nsc-WW-IkY"/>
+                    </view>
+                    <connections>
+                        <outlet property="caracteristicasLabel" destination="YUX-f6-Qcu" id="72u-e0-3Th"/>
+                        <outlet property="compatibleConLabel" destination="ffE-Cs-1TK" id="3Qz-V5-oJY"/>
+                        <outlet property="direccionLabel" destination="Y5o-4h-mDa" id="o5D-tf-bP1"/>
+                        <outlet property="elementoLabel" destination="4PP-cb-EXu" id="iMs-zi-pG8"/>
+                        <outlet property="estacionLabel" destination="H3E-Po-ccA" id="Uu8-Zx-V0b"/>
+                        <outlet property="horoscopoImage" destination="igb-Z5-Seg" id="76t-Ld-3Qy"/>
+                        <outlet property="titleLabel" destination="jrL-G5-3Ym" id="XzZ-yZ-aRY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1f-xE-yNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689.8550724637682" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icono" width="709" height="709"/>
+        <image name="marco3" width="1024" height="1247"/>
+        <image name="marco4" width="4748" height="7030"/>
+        <image name="tigre" width="1004" height="1024"/>
+    </resources>
+    <color key="tintColor" red="0.90305358170000005" green="0.043607860800000002" blue="0.074783720080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
